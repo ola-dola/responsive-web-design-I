@@ -67,9 +67,10 @@ h1, h2, h3, h4, h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 body {
+	width: 960px;
 	text-align: justify;
 	padding: 40px;
-	/* width: 960px */
+	margin: 0 auto;
 }
 
 #nav-bar {
@@ -78,28 +79,47 @@ body {
 	align-items: center;
 }
 
+@media (max-width:800px) {
+    #nav-bar {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+}
+
 nav a {
 	text-decoration: none;
 	color: black;
 }
-.intro {
+
+#intro {
 	display: flex;
-	justify-content: flex-end;
-	padding:  15px 30px;
+	justify-content: space-between;
+	padding:  15px 10px;
 	margin: 15px;
 }
 
-#divHead {
-	padding-left: 250px;
+.divHead {
+	padding-left: 130px;
 }
 
 #bigFont {
 	text-align: center;
 	width: 125px;
-	font-size: 65px;
+	font-size: 55px;
 	font-weight: bolder;
 	align-self: center;
 	padding-top: 65px;
+}
+
+#introPar {
+    display: inline-block;
+    padding: 0 20px;
+    margin-left: 3.5%;
+    border: 1px solid black;
+    justify-content: center;
+        
 }
 
 .sec1 {
